@@ -1,9 +1,22 @@
+$main-colour-component:#00A3FF;
+$colour-component-hignlight:white;
+$trans-text:rgba(0, 0, 0, 0.5);
+$text-colour:black;
+
+$regular-16:16px 'Inter', sans-serif;
+$regular-12:12px 'Inter', sans-serif;
+
+$semi-bold-16:16px 'Inter' 600,sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 *{
   box-sizing: border-box;
   margin: 0px;
 }
 
 body{
+    font: $regular-16;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +25,70 @@ body{
 }
 .main-container{
     width: 554px;
+    display: flex;
+    flex-direction: column;
     height: 648px;
     background: rgba(255, 255, 255, 0.76);
+    padding: 50px;
+    .textbox-group{
+        width: 100%;
+        height: 40px;
+        display: flex;
+
+        [type="text"]{
+            padding: 10px;
+            border: none;
+            width: 100%;
+        }
+        button{
+            width: 40px;
+            border: none;
+            background: $main-colour-component;
+            i{
+                font-size:25px;
+                color:$colour-component-hignlight;
+            }
+        }
+    }
+    .tabs{
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+
+        span{
+            font:$regular-12;
+            margin-right: 10px;
+        }
+    }
+    .itemList{
+        height:100%;
+
+        div{
+            padding: 10px;
+            align-items: center;
+            display: flex;
+            background: white;
+            margin-bottom: 10px;
+            .name{
+                width: 100%;
+                padding: 0px 10px;
+            }
+            button{
+                width: 39px;
+                height: 39px;
+                i{
+                    font-size: 25px;
+                    color: $colour-component-hignlight;
+                }
+                border: none;
+            }
+            .check{
+                background: #009C06;
+            }
+            .times{
+                background: #FF0000;
+                margin-left: 10px;
+            }
+        }
+    }
 }
