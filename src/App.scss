@@ -54,6 +54,7 @@ body{
         display: flex;
         width: 100%;
         margin-bottom: 20px;
+        margin-top: 5px;
 
         span{
             font:$regular-12;
@@ -62,7 +63,7 @@ body{
     }
     .itemList{
         height:100%;
-
+        overflow-y:auto;
         div{
             padding: 10px;
             align-items: center;
@@ -74,18 +75,30 @@ body{
                 padding: 0px 10px;
             }
             button{
-                width: 39px;
-                height: 39px;
+                // width: 39px;
+                // height: 39px;
+                text-align: center;
                 i{
                     font-size: 25px;
                     color: $colour-component-hignlight;
                 }
-                border: none;
+                border: none ;
             }
             .check{
                 background: #009C06;
+                width: 39px;
+                height: 39px;
+            }
+            .undo{
+                color: $colour-component-hignlight;
+                height: 39px;
+                background: #FFB800;
+                padding: 0px 20px;
+                font:$semi-bold-16;
             }
             .times{
+                width: 39px;
+                height: 39px;
                 background: #FF0000;
                 margin-left: 10px;
             }
