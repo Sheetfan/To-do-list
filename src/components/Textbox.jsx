@@ -3,14 +3,17 @@ export default function Textbox({items,setItems}){
     let [newName,setNewName] = useState("");
     
     function addItem(){
-        let newId = Date.now();
-        let newItem = {
-            id:newId,
-            name:newName,
-            completed:false
+        if (newName.trim() !== '') {
+            let newId = Date.now();
+            let newItem = {
+                id:newId,
+                name:newName,
+                completed:false
+            }
+            setItems((prevItems) => [...prevItems,newItem]);
+            setNewName("");
         }
-        setItems((prevItems) => [...prevItems,newItem]);
-        setNewName("");
+        
     }
     return(
         <div className="textbox-group">
